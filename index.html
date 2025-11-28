@@ -4,11 +4,11 @@
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <link rel="stylesheet" href="styles/style.css"/>
-  <title>Hello, World!</title>
+  <title>Mood Tracker</title>
 </head>
 <body>
-  <div>
-    <h1>Your Mood Today</h1>
+  <div class="main">
+    <h1 id="title">Your Mood Today</h1>
     <h2 id="date-display">Day, d.m.y</h2>
     <div class="moods">
       <div class="happiness">
@@ -17,13 +17,13 @@
         </h2>
         <div class="happiness-selection">
           <form id="h-form">
-            <p>Sad</p>
-            <input id="h-1" type="radio" class="h-mood-btn" name="h-value">
-            <input id="h-2" type="radio" class="h-mood-btn" name="h-value">
-            <input id="h-3" type="radio" class="h-mood-btn" name="h-value">
-            <input id="h-4" type="radio" class="h-mood-btn" name="h-value">
-            <input id="h-5" type="radio" class="h-mood-btn" name="h-value">
-            <p>Happy</p>
+            <label for="h-1">Sad</label>
+            <input id="h-1" type="radio" class="h-mood-btn" name="h-value" value="1">
+            <input id="h-2" type="radio" class="h-mood-btn" name="h-value" value="2">
+            <input id="h-3" type="radio" class="h-mood-btn" name="h-value" value="3">
+            <input id="h-4" type="radio" class="h-mood-btn" name="h-value" value="4">
+            <input id="h-5" type="radio" class="h-mood-btn" name="h-value" value="5">
+            <label for="h-5">Happy</label>
           </form>
         </div>
       </div>
@@ -33,16 +33,18 @@
         </h2>
         <div class="anger-selection">
           <form id="a-form">
-            <p>Calm</p>
-            <input id="a-1" type="radio" class="a-mood-btn" name="a-value">
-            <input id="a-2" type="radio" class="a-mood-btn" name="a-value">
-            <input id="a-3" type="radio" class="a-mood-btn" name="a-value">
-            <input id="a-4" type="radio" class="a-mood-btn" name="a-value">
-            <input id="a-5" type="radio" class="a-mood-btn" name="a-value">
-            <p>Angry</p>
+            <label for="a-1">Calm</label>
+            <input id="a-1" type="radio" class="a-mood-btn" name="a-value" value="1">
+            <input id="a-2" type="radio" class="a-mood-btn" name="a-value" value="2">
+            <input id="a-3" type="radio" class="a-mood-btn" name="a-value" value="3">
+            <input id="a-4" type="radio" class="a-mood-btn" name="a-value" value="4">
+            <input id="a-5" type="radio" class="a-mood-btn" name="a-value" value="5">
+            <label for="a-5">Angry</label>
           </form>
         </div>
       </div>
+      <button id="save-btn" class="primary-btn">SAVE</button>
+      <button id="clear-btn" class="secondary-btn">CLEAR</button>
     </div>
   </div>
   <script src="scripts/script.js"></script>
