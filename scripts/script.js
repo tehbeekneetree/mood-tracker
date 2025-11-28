@@ -52,8 +52,10 @@ function loadMood() {
     
     if (localStorage.getItem(`${date.getDate}.${date.getMonth}.${date.getFullYear}`)!=null) {
         let moods = localStorage.getItem(`${date.getDate}.${date.getMonth}.${date.getFullYear}`)
-        document.querySelector(`input[name="h-value"]`, `input[value="${moods[0]}"]`).checked = true; 
-        document.querySelector(`input[name="a-value"]`, `input[value="${moods[1]}"]`).checked = false;
+        console.log(moods[0]);
+        console.log(moods[2]);
+        document.querySelector(`input[id="h-${moods[0]}"]`).checked = true; 
+        document.querySelector(`input[id="a-${moods[2]}"]`).checked = true;
     }
 }
 
