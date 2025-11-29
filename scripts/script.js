@@ -1,5 +1,6 @@
 let dateDisplay = document.getElementById("date-display");
 let saveButton = document.getElementById("save-btn");
+let clearButton = document.getElementById("clear-btn");
 
 let happinessValue = null;
 let angerValue = null;
@@ -59,5 +60,13 @@ function loadMood() {
     }
 }
 
+function clearInput() {
+    for(let i=1; i<=5; i++) {
+        document.querySelector(`input[id="h-${i}"]`).checked = false;
+        document.querySelector(`input[id="a-${i}"]`).checked = false
+    }
+}
+
 window.addEventListener("load", ()=>{loadMood(); setDate()});
 saveButton.addEventListener("click", ()=>{saveMood()})
+clearButton.addEventListener("click", ()=>{clearInput()})
